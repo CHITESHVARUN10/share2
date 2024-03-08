@@ -1,0 +1,82 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -backdrop-filter: blur(5px); /*Adjust the blur intensity as desired*/
+    -webkit-backdrop-filter: blur(5px); /*Adjust the blur intensity as desired*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    gap: 10px;
+  }
+  .close {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  .find-donorog {
+    background-color: black;
+    color: white;
+    padding: 20px 60px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sel-state {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  
+  .sel-city {
+    padding-bottom: 15px;
+  }
+  .sel-state label[for="state"] {
+    padding-right: 10px;
+  }
+  .sel-city label[for="city"] {
+    padding-right: 10px;
+  }
+  
+  .search {
+    background-color: black;
+    color: white;
+  }
+  .modalfd{
+    display: flex;
+    justify-content: center;
+  }
+
+  .donordhundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .trouble{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */

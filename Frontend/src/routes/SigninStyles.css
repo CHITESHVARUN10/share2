@@ -1,0 +1,61 @@
+ .signin {
+    /* background-color: rgba(255, 255, 255, 0.6); */
+  }
+  .signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 110px;
+  }
+  .signin-background {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    align-items: center;
+    background-image: url("../assets/cat.jpg");/* Replace 'background-image.jpg' with your actual image file name*/
+    background-size: cover;
+    filter: blur(1px);
+    
+  }
+  
+  .ahac {
+    /* margin-left: 40px; */
+    padding: 5px;
+    /* border: 2px solid black; */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* margin-bottom: 5px; */
+  }
+  .log-in {
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin-left: 7px;
+    transition: ease-in-out;
+    /* margin-bottom: 20px; */
+  }
+  .log-in:hover {
+    transform: scale(1.2);
+  }
+  
+  .ahas {
+  
+    padding: 5px;
+    /* border: 2px solid black; */
+    /* margin-bottom: 15px; */
+  
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .sign-in {
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin-left: 7px;
+    transition: ease-in-out;
+    /* margin-bottom: 20px; */
+  }

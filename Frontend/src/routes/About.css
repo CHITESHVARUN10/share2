@@ -1,0 +1,25 @@
+.first-about {
+}
+
+.about-img {
+  width: 100%;
+}
+
+.second-about {
+  font-size: 1.1rem;
+  /* width: 100%; */
+  margin-right: 30px;
+  text-align: start;
+  padding: 30px;
+  background-color: #eaeaea;
+  margin-left: 25px;
+  transition: transform 0.3s ease;
+  padding-top: 30px;
+}
+
+.second-about:hover {
+  transform: scale(1.1);
+}
+.about-title {
+  padding-top: 30px;
+}

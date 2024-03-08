@@ -1,0 +1,28 @@
+.answer {
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+  }
+  .question {
+    padding: 10px;
+  }
+  
+  .spacer {
+    height: 10px;
+  }
+  
+  .faq-item {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 35px;
+    border-radius: 15px;
+    font-size: 20px;
+    /* transition: ease-in-out; */
+  }
+  
+  /* .faq-item:hover {
+    transform: scale(1.2);
+  }
+   */

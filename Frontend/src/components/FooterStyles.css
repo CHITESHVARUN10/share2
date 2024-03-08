@@ -1,0 +1,44 @@
+.footer {
+    padding: 20px;
+    background-color: black;
+  
+    color: white;
+  }
+  .footer h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    margin: 0 10px;
+    font-size: 30px;
+    color: white;
+  }
+  
+  .divider {
+    /* border:none;
+     */
+    border-top: 1px solid white;
+    margin: 20px 0;
+  }
+  #copy {
+    padding-top: 15px;
+  }
+  .icon.instagram:hover {
+    transform: scale(1.5);
+  }
+  .icon.facebook:hover {
+    transform: scale(1.5);
+  }
+  .icon.twitter:hover {
+    transform: scale(1.5);
+  }
+  .icon.linkedin:hover {
+    transform: scale(1.5);
+  }
+  

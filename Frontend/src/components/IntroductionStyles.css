@@ -1,0 +1,124 @@
+
+  #p1 {
+    /* padding-bottom: 2px; */
+    font-size: 1.1rem;
+    width: 45%;
+    text-align: start;
+    padding: 30px;
+    background-color: white;
+    margin-left: 25px;
+    transition: transform 0.3s ease;
+  }
+  /* #p1:hover {
+    transform: scale(1.1);
+  }
+  .photo1 {
+    transition: transform 0.3s ease-in-out;
+  }
+  .photo1:hover {
+    transform: scale(1.1);
+  } */
+  
+  .introduction h1 {
+    font-size: 2rem;
+  }
+  /* .photo {
+    width: 100%;
+    height: 100%;
+  } */
+  .first-des {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color: #eaeaea;
+    margin: 4rem 0;
+    padding: 30px;
+  }
+  .find-donor {
+    background-color: black;
+    color: white;
+    padding: 20px 60px;
+    font-size: 18px;
+    transition: ease-in-out;
+    justify-content: center;
+  }
+  .find-donor:hover{
+    transform: scale(1.2);
+  }
+  
+  .view-requirement {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    margin-right: px;
+  }
+  
+  #register {
+    color: white;
+    border-radius: 25px;
+    background-color: maroon;
+    margin-left: 15px;
+    transition: ease-in-out;
+  }
+  #register2 {
+    color: white;
+    border-radius: 25px;
+    background-color: maroon;
+    margin-right: 15px;
+    transition: ease-in-out;
+  }
+  
+  #register:hover{
+    transform: scale(1.2);
+  }
+  
+  #register2:hover{
+    transform: scale(1.2);
+  }
+  
+  .enroll {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  /* .trouble {
+    /* background-color: rgb(235, 236, 238);
+  c */ */
+  
+  .start {
+    background-color: white;
+    margin-bottom: 25px;
+  }
+  #bloodneed {
+    background-color: rgb(235, 236, 238);
+    padding-top: 30px;
+    margin-top: 50px;
+  }
+  
+   .trouble{
+    display: flex;
+    align-items: center;
+justify-content: center;
+  } 
+  
+  .btg{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
