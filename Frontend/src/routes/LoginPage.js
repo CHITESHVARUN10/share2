@@ -1,42 +1,60 @@
 import { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./LoginStyles.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
 
-  const handleLogin = () => {
-    window.scrollTo(0, 0);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    // Perform login logic here
-    // For example, send an API request to authenticate the user
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/user/login', formData);
+      const authToken = response.data.authtoken;
 
-    // Assuming login is successful
-    // Redirect to the home page
-    navigate("/");
+      // Show success alert
+      console.log(authToken);
+      alert('Login successful!');
+
+      // Store the auth token in local storage
+      localStorage.setItem('authToken', authToken);
+
+      // Redirect the user to another page or update the UI as needed
+      navigate("/"); // Example: Redirect to the home page
+    } catch (error) {
+      console.error('Login failed:', error.response.data);
+      // Handle login error (e.g., display error message)
+    }
   };
 
   return (
     <div className="login-container">
       <h2>Login Page</h2>
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleSubmit}>
         <input
           placeholder="Email"
           type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
         />
 
         <input
           placeholder="Password"
           type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
         />
 
-        <button type="button" onClick={handleLogin}>
+        <button type="submit">
           Login
         </button>
       </form>

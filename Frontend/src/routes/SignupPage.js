@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import "./SignupStyles.css";
 import { useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
@@ -10,46 +9,32 @@ const SignupPage = () => {
   const [username, setUsername] = useState("");
 
   const handleRegistration = () => {
-    if (username.length === 0) {
-      alert("Username is left Blank!");
-    } else if (password.length === 0) {
-      alert("Password is left Blank!");
-    } else if (email.length === 0) {
-      alert("Email is left Blank!");
-    } else {
-      // const url = "http://localhost/test/formsubmit.php";
-      // const url = "http://localhost:3001";
-
-      const url =
-        "https://pawsitive-match-relsons-projects.vercel.app/user/signup";
-      let fData = new FormData();
-      fData.append("username", username);
-      fData.append("password", password);
-      fData.append("emailId", email);
-      const data = {
-        username: username,
-        password: password,
-        emailId: email,
-      };
-      axios
-        .post(url, data)
-        .then((response) => {
-          alert(response.data);
-          // Assuming successful registration, redirect to the home page
-          handleSignup();
-        })
-        .catch((error) => alert(error));
+    if (!username || !password || !email) {
+      alert("Please fill in all fields.");
+      return;
     }
-  };
 
-  const handleSignup = () => {
-    window.scrollTo(0, 0);
-    // Perform login logic here
-    // For example, send an API request to authenticate the user
+    const url = "http://localhost:5000/user/signup";
+    const data = {
+      username: username,
+      password: password,
+      email: email
+      
+    };
 
-    // Assuming login is successful
-    // Redirect to the home page
-    navigate("/");
+    axios
+      .post(url, data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        alert(response.data.auth_token);
+        navigate("/");
+      })
+      .catch((error) => {
+        alert(error.response.data.error || "An error occurred.");
+      });
   };
 
   return (
